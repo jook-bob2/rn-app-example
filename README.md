@@ -1,2 +1,1 @@
 # SampleRN
-# rn-app-example
