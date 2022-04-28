@@ -1,0 +1,377 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:ios)
+
+module Constant
+  # 프로젝트 이름
+  PROJECT = "ChabapApp.xcodeproj"
+  # workspace
+  WORKSPACE = "ChabapApp.xcworkspace"
+  # 스키마
+  SCHEME = "ChabapApp"
+  # configurations
+  DEBUG = "Debug"
+  ALPHA = "Alpha"
+  BETA = "Beta"
+  RELEASE = "Release"
+  # 앱 올리고 나서 배포할 때 mattermost hook
+  MATTERMOST_URL = "https://mm.starlabs.co.kr/hooks/fsyafx65nbdqjrro8fyi5epsuw"
+  # mattermost channel
+  MATTERMOST_CHANNEL = "cicd"
+  # mattermost icon
+  MATTERMOST_ICON = "https://jenkins.io/images/logos/jenkins/jenkins.png"
+  # 인증서를 가져올 app id
+  APP_IDENTIFIERS = ["kr.co.chabap"]
+  # 파이어베이스 배포에 올릴 앱
+  FIREBASE_APP_ID = "1:1004320714067:ios:394416c9d40c06802085a6"
+  # 파이어베이스 배포 테스트 그룹
+  FIREBASE_TEST_GROUP = "연구개발실"
+  # 파이어베이스 배포를 하고 버전 범프를 푸시할 리모트의 이름
+  REMOTE_NAME = "origin"
+  
+end
+
+def get_version()
+  return get_version_number(xcodeproj: Constant::PROJECT, target: Constant::SCHEME)
+end
+
+def get_build()
+  return get_build_number(xcodeproj: Constant::PROJECT)
+end
+
+def set_version(version)
+  puts("버전 =======================> #{version}")
+  increment_version_number(
+    version_number: version,
+    xcodeproj: Constant::PROJECT
+  )
+  # update_info_plist(
+  #   plist_path: "ChabapApp/Info.plist",
+  #   block: proc do |plist|
+  #     versionSpecifiers = plist["PreferenceSpecifiers"].find{|specifiers|specifiers["Key"] == "Version"}
+  #     versionSpecifiers["DefaultValue"] = version
+  #   end
+  # )
+end
+
+def set_build(build)
+  increment_build_number(
+    build_number: build,
+    xcodeproj: Constant::PROJECT
+  )
+end
+
+def increase_build(increase_by = 1)
+  build = get_build()
+  splited = build.split('.')
+  major = splited[0]
+  minor = splited[1]
+  patch = splited[2]
+  build_number = splited[3]
+  new_build = "#{major}.#{minor}.#{patch}.#{build_number.to_i + increase_by}"
+  set_build(new_build)
+  return new_build
+end
+
+def increase_version(increase_by = 1)
+  version = get_version()
+  splited = version.split('.')
+  major = splited[0]
+  minor = splited[1]
+  patch = splited[2]
+  new_version = "#{major}.#{minor}.#{patch}.#{patch.to_i + increase_by}"
+  new_build = "#{new_version}.0"
+  set_version(new_version)
+  set_build(new_build)
+  return new_version
+end
+
+def on_success(message_value)
+  version = get_version()
+  build = get_build()
+  mattermost(
+    url: Constant::MATTERMOST_URL,
+    channel: Constant::MATTERMOST_CHANNEL,
+    username: 'jskim91',
+    text: message_value + "\nversion: #{version}\nbuild: #{build}",
+    icon_url: Constant::MATTERMOST_ICON,
+  )
+end
+
+def on_error(exception)
+  puts("On error exception ==> #{exception}")
+  version = get_version()
+  build = get_build()
+  mattermost(
+    url: Constant::MATTERMOST_URL,
+    channel: Constant::MATTERMOST_CHANNEL,
+    username: 'jskim91',
+    text: "<!here> fastlane 빌드 중 문제가 발생했습니다.\nversion: #{version}\nbuild: #{build}",
+    icon_url: Constant::MATTERMOST_ICON,
+  )
+end
+
+def version_bump(options)
+  if options[:type]
+    type = options[:type].strip
+    if type == 'version'
+      puts("============== 버전이 업데이트 됩니다. ================")
+      increase_version()
+    else
+      puts("============== 빌드가 업데이트 됩니다. ================")
+      increase_build()
+    end
+  else 
+    puts("============ 빌드 및 버전 업데이트가 실행되지 않았습니다. ================")
+  end
+end
+# def get_commit_log()
+#   puts("Last tag ==> ")
+#   last_tag = last_git_tag()
+#   puts("#{last_tag}")
+#   add_git_tag
+#   changelog = changelog_from_git_commits(
+#     between: [last_tag, "HEAD"]
+#   )
+#   current_build = get_build()
+#   log = """#{current_build} 버전은 아래와 같은 수정사항이 반영되었습니다. #{changelog}"""
+
+#   return log
+# end
+def get_release_note()
+  build = get_build()
+  version = get_version()
+  release_notes = get_git_commits()
+  puts("=================================================================================")
+  puts("============================= #{release_notes} =============================")
+  puts("=================================================================================")
+  return release_notes
+end
+
+def get_git_commits()
+  puts("=================================================================================")
+  puts("======================커밋 로그=============================")
+  puts("=================================================================================")
+  changelog = changelog_from_git_commits(
+    between: [last_git_tag, "HEAD"],  # Optional, lets you specify a revision/tag range between which to collect commit info
+    pretty: "- (%ae) %s",# Optional, lets you provide a custom format to apply to each commit when generating the changelog text
+    date_format: "short",# Optional, lets you provide an additional date format to dates within the pretty-formatted string
+    match_lightweight_tag: false,  # Optional, lets you ignore lightweight (non-annotated) tags when searching for the last tag
+    merge_commit_filtering: "exclude_merges" # Optional, lets you filter out merge commits
+  )
+  puts("변경 로그 :: #{changelog}")
+  return changelog
+end
+
+def git_tagging()
+  version = get_version()
+  build = get_build()
+  add_git_tag(
+    grouping: "fastlane-builds",
+    includes_lane: true,
+    prefix: "v",
+    postfix: "-RC-#{build}",
+    build_number: version
+  )
+end
+
+def upload_to_firebase(options)
+  puts("=================================================================================")
+  puts("=========================== Match pending ===========================")
+  puts("=================================================================================")
+  match(app_identifier: Constant::APP_IDENTIFIERS, type: "adhoc")
+  puts("=================================================================================")
+  puts("=========================== Match success ===========================")
+  puts("=================================================================================")
+  build_app(workspace: Constant::WORKSPACE, scheme: Constant::SCHEME, configuration: Constant::ALPHA)
+  # workspace: "ChabapApp.xcworkspace", scheme: "ChabapApp"
+  
+  # release note
+  release_notes = get_release_note()
+  
+  # 깃 태그 추가
+  git_tagging()
+  
+  # firebase 배포
+  firebase_app_distribution(
+    app: Constant::FIREBASE_APP_ID,
+    groups: Constant::FIREBASE_TEST_GROUP,
+    release_notes: release_notes
+  )
+
+  mattermost_message = """<!here> 파이어베이스에 배포 버전이 올라갔습니다.\nRelease Note:\n#{release_notes}"""
+  
+  on_success(mattermost_message)
+
+  # version up
+  version_bump(options)
+end
+
+platform :ios do
+  desc "Push a new release build to the Distribution"
+  lane :release do
+    begin
+      match(app_identifier: Constant::APP_IDENTIFIERS, type: "adhoc")
+      build_app(project: Constant::PROJECT, scheme: Constant::SCHEME)
+      on_success("심사버전 빌드를 완료했습니다. 업로드를 진행합니다.")
+      upload_to_app_store(skip_metadata: true, skip_screenshots: true)
+      on_success("심사버전 업로드를 완료했습니다.")
+    rescue => exception
+      on_error(exception)
+    end
+  end
+
+  lane :develop do
+    begin
+      match(app_identifier: Constant::APP_IDENTIFIERS, type: "appstore")
+      build_app(project: Constant::PROJECT, scheme: Constant::SCHEME, configuration: Constant::Beta)
+      on_success("개발버전 빌드를 완료했습니다. 업로드를 진행합니다.")
+      upload_to_testflight(skip_submission: true, skip_waiting_for_build_processing: true)
+      on_success("개발버전 업로드를 완료했습니다.")
+    rescue => exception
+      on_error(exception)
+    end
+  end
+
+  lane :firebase do |options|
+    begin
+      upload_to_firebase(options)
+    rescue => exception
+      on_error(exception)
+    end
+  end
+
+  # get_version 명령어
+  def command_gv()
+    version = get_version()
+    puts("현재 버전은 #{version} 입니다. 🎉")
+  end
+
+  lane :get_version do
+    command_gv()
+  end
+  lane :gv do
+    command_gv()
+  end
+
+  # get_build 명령어
+  def command_gb()
+    build = get_build()
+    puts("현재 빌드는 #{build} 입니다. 🎉")
+  end
+
+  lane :get_build do
+    command_gb()
+  end
+
+  # set_version 명령어
+  def command_sv(options)
+    version = get_version()
+    new_version = options[:number].strip
+    new_build = "#{new_version}.0"
+    set_version(new_version)
+    set_build(new_build)
+    puts("버전이 #{version} 에서 #{new_version} 으로 변경되었습니다. 🎉")
+    puts("빌드가 #{new_build} 로 자동 설정되었습니다. 🎉")
+  end
+
+  lane :set_version do |options|
+    command_sv(options)
+  end
+  lane :sv do |options|
+    command_sv(options)
+  end
+
+  # set_build 명령어
+  def command_sb(options)
+    build = get_build()
+    new_build = options[:number].strip
+    set_build(new_build)
+    puts("빌드가 #{build} 에서 #{new_build} 으로 변경되었습니다. 🎉")
+  end
+
+  lane :sb do |options|
+    command_sb(options)
+  end
+
+  # increase_version 명령어
+  def command_iv(options)
+    increase_by = 1
+    if options[:by]
+      increase_by = options[:by].to_i
+    end
+
+    new_version = increase_version(increase_by)
+    puts("버전이 #{new_version} 으로 올라갔습니다. 🎉")
+    puts("빌드가 #{new_version}.0 으로 자동 설정되었습니다. 🎉")
+  end
+
+  lane :increase_version do |options|
+    command_iv(options)
+  end
+  lane :iv do |options|
+    command_iv(options)
+  end
+
+  # increase_build 명령어
+  def command_ib(options)
+    increase_by = 1
+    if options[:by]
+      increase_by = options[:by].to_i
+    end
+    new_build = increase_build(increase_by)
+    puts("빌드가 #{new_build} 으로 올라갔습니다. 🎉")
+  end
+
+  lane :increase_build do |options|
+    command_ib(options)
+  end
+  lane :ib do |options|
+    command_ib(options)
+  end
+
+  lane :commits do
+    get_git_commits()
+  end
+
+  lane :agt do
+    git_tagging()
+  end
+
+  lane :bump do |options|
+    version_bump(options)
+  end
+end
+# match(type: "appstore")
+# build_app(workspace: "ChabapApp.xcworkspace", scheme: "ChabapApp")
+# upload_to_app_store(skip_metadata: true, skip_screenshots: true)
+# match(
+#   git_url: 'git@gitlab.com:starlabs-rnd/chabap/chabap-app.git'
+#   type: "development",
+#   storage_mode: 'git',
+#   readonly: true,
+#   keychain_name: 'jskim91',
+#   keychain_password: 'wlstjr129@'
+# )
+# increment_build_number(xcodeproj: "ChabapApp.xcodeproj")
+# build_app(workspace: "ChabapApp.xcworkspace", scheme: "ChabapApp")
+# upload_to_app_store
+# end
+#   lane :increase_build_number do
+#     identifier = get_info_plist_value(path: "./ChabapApp/Info.plist", key: "CFBundleVersion")
+#     new_identifier = (identifier.to_i + 1).to_s
+#     set_info_plist_value(path: "./ChabapApp/Info.plist", key: "CFBundleVersion", value: new_identifier)
+#     puts("버전 넘버 " + identifier + "가 " + new_identifier + "로 변경 되었습니다.")

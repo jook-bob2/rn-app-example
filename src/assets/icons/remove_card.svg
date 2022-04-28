@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 42 42">
+    <defs>
+        <filter id="15wqv5ggda" x="0" y="0" width="42" height="42" filterUnits="userSpaceOnUse">
+            <feOffset dy="3"/>
+            <feGaussianBlur stdDeviation="3" result="blur"/>
+            <feFlood flood-color="#444" flood-opacity=".161"/>
+            <feComposite operator="in" in2="blur"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+    </defs>
+    <g data-name="그룹 429">
+        <g style="filter:url(#15wqv5ggda)">
+            <circle data-name="타원 15" cx="12" cy="12" r="12" transform="translate(9 6)" style="fill:#fff"/>
+        </g>
+        <g data-name="그룹 209">
+            <path data-name="사각형 302" transform="translate(19.227 12.396)" style="stroke-linecap:round;stroke-linejoin:round;stroke:#494949;fill:none" d="M0 0h3.55v1.811H0z"/>
+            <path data-name="사각형 303" transform="translate(16 12)" style="fill:none" d="M0 0h10v12H0z"/>
+            <path data-name="패스 97" d="M10.168 14.9H3.8l-.517-9.317h7.405z" transform="translate(14.014 8.706)" style="stroke-linecap:round;stroke-linejoin:round;stroke:#494949;fill:none"/>
+            <path data-name="패스 98" d="M1 5.582z" transform="translate(15.396 8.624)" style="stroke:#494949;fill:#fff"/>
+            <path data-name="선 100" transform="translate(16.396 14.206)" style="stroke-linecap:round;stroke-linejoin:round;stroke:#494949;fill:none" d="M0 0h9.21"/>
+            <path data-name="선 101" transform="translate(22.096 16.313)" style="stroke-linecap:round;stroke-linejoin:round;stroke:#494949;fill:none" d="M.108 0 0 5.208"/>
+            <path data-name="선 102" transform="translate(19.799 16.312)" style="stroke-linecap:round;stroke-linejoin:round;stroke:#494949;fill:none" d="M.108 5.208 0 0"/>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 42 42">
+    <defs>
+        <filter id="sau5zhvffa" x="0" y="0" width="42" height="42" filterUnits="userSpaceOnUse">
+            <feOffset dy="2"/>
+            <feGaussianBlur stdDeviation="2" result="blur"/>
+            <feFlood flood-color="#6e6e6e" flood-opacity=".161"/>
+            <feComposite operator="in" in2="blur"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+    </defs>
+    <g data-name="그룹 411" transform="translate(-300 -20)">
+        <g style="filter:url(#sau5zhvffa)" data-name="그룹 283">
+            <circle data-name="타원 12" cx="15" cy="15" r="15" transform="translate(306 24)" style="fill:#fff"/>
+        </g>
+        <path data-name="Icon awesome-bell" d="M7 16a2 2 0 0 0 2-2H5a2 2 0 0 0 2 2zm6.731-4.678C13.127 10.673 12 9.7 12 6.5a4.935 4.935 0 0 0-4-4.849V1a1 1 0 1 0-2 0v.651A4.935 4.935 0 0 0 2 6.5C2 9.7.873 10.673.269 11.322A.976.976 0 0 0 0 12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1 .976.976 0 0 0-.269-.678z" transform="translate(314 31)" style="fill:#f80"/>
+        <circle data-name="타원 24" cx="2.5" cy="2.5" r="2.5" transform="translate(323 33)" style="fill:red"/>
+    </g>
+</svg>

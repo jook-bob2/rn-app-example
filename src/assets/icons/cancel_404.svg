@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21">
+    <g data-name="그룹 404">
+        <g data-name="그룹 401">
+            <g data-name="Icon feather-info">
+                <path data-name="패스 1571" d="M23 13A10 10 0 1 1 13 3a10 10 0 0 1 10 10z" transform="translate(-2.5 -2.5)" style="fill:none;stroke:#494949;stroke-linecap:round;stroke-linejoin:round"/>
+            </g>
+        </g>
+        <path data-name="Icon ionic-ios-close" d="m14.034 13.51 1.587-1.587a.372.372 0 0 0-.521-.523l-1.587 1.587-1.592-1.587a.372.372 0 1 0-.526.526l1.587 1.587-1.587 1.587a.372.372 0 1 0 .526.526l1.587-1.587 1.592 1.585a.372.372 0 1 0 .526-.526z" transform="translate(-3.007 -3.011)" style="fill:red"/>
+    </g>
+</svg>

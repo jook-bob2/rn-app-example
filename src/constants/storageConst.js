@@ -1,0 +1,21 @@
+const TUTORIAL_FLAG = 'TUTORIAL_FLAG' // 튜토리얼 체크 여부
+const USER_INFO = 'USER_INFO' // 유저 정보
+const PHONE_PUSH_FLAG = 'PHONE_PUSH_FLAG' // 핸드폰 알림 체크 여부
+const PHOTO_PERMISSION = 'PHOTO_PERMISSION' // 사진 권한
+const LOCATION_PERMISSION = 'LOCATION_PERMISSION' // 위치 권한
+const DEVICE_INFO = 'DEVICE_INFO' // Device 정보
+const AUTO_SIGN = 'AUTO_SIGN' // 자동 로그인 데이터
+const USING_USER_LIST = 'USING_USER_LIST' // 사용중인 계정 리스트
+const IS_BACK = 'IS_BACK' // 뒤로가기 가능 여부
+
+export default {
+	TUTORIAL_FLAG,
+	USER_INFO,
+	PHONE_PUSH_FLAG,
+	DEVICE_INFO,
+	AUTO_SIGN,
+	USING_USER_LIST,
+	IS_BACK,
+	PHOTO_PERMISSION,
+	LOCATION_PERMISSION,
+}

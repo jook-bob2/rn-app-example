@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">
+    <defs>
+        <filter id="n8zouofjpa" x="0" y="0" width="36" height="36" filterUnits="userSpaceOnUse">
+            <feOffset dy="2"/>
+            <feGaussianBlur stdDeviation="2" result="blur"/>
+            <feFlood flood-color="#6e6e6e" flood-opacity=".161"/>
+            <feComposite operator="in" in2="blur"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+    </defs>
+    <g data-name="그룹 334">
+        <g style="filter:url(#n8zouofjpa)" data-name="그룹 236">
+            <circle data-name="타원 12" cx="12" cy="12" r="12" transform="translate(6 4)" style="fill:#fff"/>
+        </g>
+        <path data-name="Icon awesome-car-alt" d="M9.139 7.59 8.9 7l-.411-1.033A2.322 2.322 0 0 0 6.323 4.5H3.677a2.322 2.322 0 0 0-2.166 1.467L1.1 7l-.239.59A1.33 1.33 0 0 0 0 8.833v1a1.322 1.322 0 0 0 .333.874v1.126A.667.667 0 0 0 1 12.5h.667a.667.667 0 0 0 .667-.667v-.667h5.333v.667a.667.667 0 0 0 .667.667H9a.667.667 0 0 0 .667-.667v-1.126A1.322 1.322 0 0 0 10 9.833v-1a1.33 1.33 0 0 0-.861-1.243zm-6.39-1.128a1 1 0 0 1 .929-.629h2.645a1 1 0 0 1 .929.629L7.667 7.5H2.333l.415-1.038zM1.667 9.829a.665.665 0 1 1 0-1.329 1.283 1.283 0 0 1 1 1c0 .4-.6.329-1 .329zm6.667 0c-.4 0-1 .066-1-.332a1.283 1.283 0 0 1 1-1 .665.665 0 1 1 0 1.329z" transform="translate(13 7.5)" style="fill:#23c7d0"/>
+    </g>
+</svg>

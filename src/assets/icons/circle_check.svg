@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">
+    <defs>
+        <filter id="1uabnsik2a" x="0" y="0" width="36" height="36" filterUnits="userSpaceOnUse">
+            <feOffset dy="2"/>
+            <feGaussianBlur stdDeviation="2" result="blur"/>
+            <feFlood flood-color="#6e6e6e" flood-opacity=".161"/>
+            <feComposite operator="in" in2="blur"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+    </defs>
+    <g data-name="그룹 301">
+        <g style="filter:url(#1uabnsik2a)" data-name="그룹 274">
+            <circle data-name="타원 12" cx="12" cy="12" r="12" transform="translate(6 4)" style="fill:#fff"/>
+        </g>
+        <path data-name="Icon ionic-ios-checkmark" d="m20.382 13.143-.817-.878a.172.172 0 0 0-.13-.058.165.165 0 0 0-.13.058l-5.666 5.962-2.062-2.154a.174.174 0 0 0-.26 0l-.827.864a.2.2 0 0 0 0 .277l2.6 2.717a.809.809 0 0 0 .543.277.849.849 0 0 0 .539-.267l6.209-6.52a.214.214 0 0 0 .001-.278z" transform="translate(2.565 -.206)" style="fill:#23c7d0"/>
+    </g>
+</svg>

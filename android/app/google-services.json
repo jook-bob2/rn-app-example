@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "1004320714067",
+    "project_id": "chabap-9d8bc",
+    "storage_bucket": "chabap-9d8bc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1004320714067:android:8119f30b8f07f8df2085a6",
+        "android_client_info": {
+          "package_name": "kr.co.chabap"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1004320714067-dekqpu8rs0g8t30u91kc0o0bkucshp52.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTEffE7_zcUhhODzmhCRH7mDnu_M9RpRQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1004320714067-dekqpu8rs0g8t30u91kc0o0bkucshp52.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1004320714067-rgctucv1uqvbn0emkkaql534jr754a9g.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "kr.co.chabap"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,4 @@
+{
+    "NODE_ENV": "local",
+    "API_URL": "http://127.0.0.1:8080"
+}

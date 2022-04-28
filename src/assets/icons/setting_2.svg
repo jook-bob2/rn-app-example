@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">
+    <defs>
+        <filter id="1u0sybd0ha" x="0" y="0" width="36" height="36" filterUnits="userSpaceOnUse">
+            <feOffset dy="2"/>
+            <feGaussianBlur stdDeviation="2" result="blur"/>
+            <feFlood flood-color="#6e6e6e" flood-opacity=".161"/>
+            <feComposite operator="in" in2="blur"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+    </defs>
+    <g data-name="그룹 335">
+        <g style="filter:url(#1u0sybd0ha)" data-name="그룹 311">
+            <circle data-name="타원 12" cx="12" cy="12" r="12" transform="translate(6 4)" style="fill:#fff"/>
+        </g>
+        <path data-name="Icon ionic-ios-settings" d="M13.674 9.5a1.287 1.287 0 0 1 .826-1.2 5.1 5.1 0 0 0-.617-1.487 1.3 1.3 0 0 1-.523.112 1.284 1.284 0 0 1-1.174-1.807A5.085 5.085 0 0 0 10.7 4.5a1.286 1.286 0 0 1-2.4 0 5.1 5.1 0 0 0-1.487.617 1.284 1.284 0 0 1-1.175 1.807 1.262 1.262 0 0 1-.523-.112A5.213 5.213 0 0 0 4.5 8.3a1.286 1.286 0 0 1 0 2.4 5.1 5.1 0 0 0 .62 1.49 1.284 1.284 0 0 1 1.7 1.7 5.13 5.13 0 0 0 1.48.61 1.283 1.283 0 0 1 2.4 0 5.1 5.1 0 0 0 1.487-.617 1.286 1.286 0 0 1 1.7-1.7A5.13 5.13 0 0 0 14.5 10.7a1.293 1.293 0 0 1-.826-1.2zm-4.151 2.081A2.083 2.083 0 1 1 11.607 9.5a2.083 2.083 0 0 1-2.084 2.081z" transform="translate(8.5 6.5)" style="fill:#494949"/>
+    </g>
+</svg>

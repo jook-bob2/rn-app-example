@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 28">
+    <defs>
+        <filter id="cf7g1nfp0a" x="0" y="0" width="32" height="32" filterUnits="userSpaceOnUse">
+            <feOffset dy="2"/>
+            <feGaussianBlur stdDeviation="2" result="blur"/>
+            <feFlood flood-color="#858585" flood-opacity=".161"/>
+            <feComposite operator="in" in2="blur"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+    </defs>
+    <g data-name="그룹 321">
+        <g style="filter:url(#cf7g1nfp0a)">
+            <circle data-name="타원 13" cx="10" cy="10" r="10" transform="translate(6 4)" style="fill:#fff"/>
+        </g>
+        <path data-name="Icon material-person" d="M11 11a2.5 2.5 0 1 0-2.5-2.5A2.5 2.5 0 0 0 11 11zm0 1.25c-1.669 0-5 .837-5 2.5V16h10v-1.25c0-1.663-3.331-2.5-5-2.5z" transform="translate(5 3)" style="fill:#23c7d0"/>
+    </g>
+</svg>

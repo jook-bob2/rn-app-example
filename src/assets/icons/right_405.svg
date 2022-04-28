@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="20" viewBox="0 0 16 20">
+    <g data-name="그룹 405">
+        <g data-name="Icon feather-map-pin">
+            <path data-name="패스 1579" d="M20.5 9.682c0 6.364-8 11.818-8 11.818s-8-5.455-8-11.818a8.093 8.093 0 0 1 8-8.182 8.093 8.093 0 0 1 8 8.182z" transform="translate(-4.5 -1.5)" style="fill:#fff"/>
+        </g>
+        <path data-name="Icon material-subdirectory-arrow-left" d="m2.4 2.353.568.668-1.436 1.685H5.2V0H6v5.647H1.532l1.436 1.685L2.4 8 0 5.176z" transform="rotate(180 5.5 6.5)" style="fill:#23c7d0"/>
+    </g>
+</svg>

@@ -1,0 +1,11 @@
+<svg data-name="그룹 398" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+    <defs>
+        <clipPath id="cw1fchivda">
+            <path data-name="사각형 1244" style="fill:none;stroke:#494949" d="M0 0h18v18H0z"/>
+        </clipPath>
+    </defs>
+    <g data-name="그룹 397" style="clip-path:url(#cw1fchivda)">
+        <path data-name="패스 1569" d="M13.453 4.342A4.634 4.634 0 0 0 8.944.5a4.607 4.607 0 0 0-4.355 3.246 4.818 4.818 0 0 0-.238 1.5 4.671 4.671 0 0 0 4.593 4.745 4.672 4.672 0 0 0 4.6-4.745 4.828 4.828 0 0 0-.091-.904z" transform="translate(.054 .019)" style="stroke-miterlimit:10;fill:none;stroke:#494949"/>
+        <path data-name="패스 1570" d="M.5 17.627c0-4.206 3.8-7.617 8.493-7.616s8.494 3.41 8.494 7.616" transform="translate(.006 .372)" style="stroke-miterlimit:10;fill:none;stroke:#494949"/>
+    </g>
+</svg>

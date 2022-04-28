@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">
+    <defs>
+        <filter id="pqw3pomj8a" x="0" y="0" width="36" height="36" filterUnits="userSpaceOnUse">
+            <feOffset dy="2" />
+            <feGaussianBlur stdDeviation="2" result="blur" />
+            <feFlood flood-color="#6e6e6e" flood-opacity=".161" />
+            <feComposite operator="in" in2="blur" />
+            <feComposite in="SourceGraphic" />
+        </filter>
+    </defs>
+    <g data-name="그룹 240">
+        <g style="filter:url(#pqw3pomj8a)">
+            <circle data-name="타원 12" cx="12" cy="12" r="12" transform="translate(6 4)" style="fill:#fff" />
+        </g>
+        <path
+			data-name="패스 586"
+			d="M5 0 3.455 3.13 0 3.632l2.5 2.437-.59 3.441L5 7.885 8.09 9.51 7.5 6.069 10 3.632l-3.454-.5z"
+			transform="translate(13 11)"
+			style="fill:#f75b32"
+		/>
+    </g>
+</svg>

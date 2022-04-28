@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
+    <defs>
+        <filter id="gwqkwoydsa" x="0" y="0" width="28" height="28" filterUnits="userSpaceOnUse">
+            <feOffset dy="2"/>
+            <feGaussianBlur stdDeviation="2" result="blur"/>
+            <feFlood flood-color="#858585" flood-opacity=".161"/>
+            <feComposite operator="in" in2="blur"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+    </defs>
+    <g data-name="그룹 303">
+        <g style="filter:url(#gwqkwoydsa)" data-name="그룹 281">
+            <circle data-name="타원 14" cx="8" cy="8" r="8" transform="translate(6 4)" style="fill:#fff"/>
+        </g>
+        <path data-name="Icon simple-designernews" d="M25.763 14.325v-6h-1.647v3.355l-2.632-3.355h-1.721v6h1.647v-3.592l2.818 3.59h1.534z" transform="translate(-8.762 .675)" style="fill:#f80"/>
+    </g>
+</svg>

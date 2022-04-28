@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+    <g data-name="그룹 516">
+        <g data-name="Icon ionic-ios-close-circle-outline">
+            <path data-name="패스 2241" d="M15.375 4.99a10.381 10.381 0 1 1-7.344 3.04 10.316 10.316 0 0 1 7.344-3.04m0-1.615a12 12 0 1 0 12 12 12 12 0 0 0-12-12z" style="fill:#fff" transform="translate(-3.375 -3.375)"/>
+        </g>
+        <g data-name="Icon feather-arrow-right-circle">
+            <path data-name="패스 2244" d="m18 20.426 4.213-4.213L18 12" transform="translate(-5.67 -4)" style="fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5px"/>
+            <path data-name="패스 2245" d="M12 18h8.426" transform="translate(-4 -5.787)" style="fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5px"/>
+        </g>
+    </g>
+</svg>

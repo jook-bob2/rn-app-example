@@ -1,0 +1,49 @@
+{
+  "root": true,
+  "env": {
+    "es6": true,
+    "node": true,
+    "jest": true
+  },
+  "extends": [
+    "@react-native-community", 
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true,
+      "js": true
+    },
+    "ecmaVersion": 2020,
+    "sourceType": "module"
+  },
+  "plugins": ["react", "react-hooks", "prettier"],
+  "rules": {
+    "react/react-in-jsx-scope": 0,
+    "react/prefer-stateless-function": 0,
+    "react/jsx-filename-extension": 0,
+    "react/jsx-one-expression-per-line": 0,
+    "no-nested-ternary": 0,
+    "react/prop-types": "off",
+    "no-prototype-builtins": "off",
+    "eqeqeq": "warn",
+    "no-console": "off",
+    "no-var": "error",
+    "no-else-return": "error",
+    "no-alert": "warn",
+    "react/display-name": "off",
+    "react/self-closing-comp": "off",
+    "react-native/no-inline-styles": "off",
+    "react-hooks/exhaustive-deps": "off",
+    "react-hooks/rules-of-hooks": "off",
+    "eslint-disable-next-line": "off",
+    "no-bitwise": "off"
+  }
+}

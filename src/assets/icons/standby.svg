@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+    <defs>
+        <filter id="meju2n4gsa" x="0" y="0" width="32" height="32" filterUnits="userSpaceOnUse">
+            <feOffset dy="2"/>
+            <feGaussianBlur stdDeviation="2" result="blur"/>
+            <feFlood flood-color="#858585" flood-opacity=".161"/>
+            <feComposite operator="in" in2="blur"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+    </defs>
+    <g data-name="그룹 333">
+        <g style="filter:url(#meju2n4gsa)" data-name="그룹 253">
+            <circle data-name="타원 14" cx="10" cy="10" r="10" transform="translate(6 4)" style="fill:#fff"/>
+        </g>
+        <g data-name="Icon feather-loader">
+            <path data-name="패스 596" d="M18 3v2.12" transform="translate(-2 6)" style="fill:none;stroke:#494949;stroke-linecap:round;stroke-linejoin:round"/>
+            <path data-name="패스 597" d="M18 27v2.12" transform="translate(-2 -10.12)" style="fill:none;stroke:#494949;stroke-linecap:round;stroke-linejoin:round"/>
+            <path data-name="패스 598" d="m7.4 7.4 1.5 1.5" transform="translate(5.158 3.158)" style="fill:none;stroke:#494949;stroke-linecap:round;stroke-linejoin:round"/>
+            <path data-name="패스 599" d="m24.36 24.36 1.5 1.5" transform="translate(-6.413 -8.413)" style="fill:none;stroke:#494949;stroke-linecap:round;stroke-linejoin:round"/>
+            <path data-name="패스 600" d="M3 18h2.12" transform="translate(8 -4)" style="fill:none;stroke:#494949;stroke-linecap:round;stroke-linejoin:round"/>
+            <path data-name="패스 601" d="M27 18h2.12" transform="translate(-8.12 -4)" style="fill:none;stroke:#494949;stroke-linecap:round;stroke-linejoin:round"/>
+            <path data-name="패스 602" d="m7.4 25.86 1.5-1.5" transform="translate(5.158 -8.413)" style="fill:none;stroke:#494949;stroke-linecap:round;stroke-linejoin:round"/>
+            <path data-name="패스 603" d="m24.36 8.9 1.5-1.5" transform="translate(-6.413 3.158)" style="fill:none;stroke:#494949;stroke-linecap:round;stroke-linejoin:round"/>
+        </g>
+    </g>
+</svg>

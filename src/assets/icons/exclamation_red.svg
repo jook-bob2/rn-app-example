@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">
+    <defs>
+        <filter id="ojbxzg3d8a" x="0" y="0" width="36" height="36" filterUnits="userSpaceOnUse">
+            <feOffset dy="2"/>
+            <feGaussianBlur stdDeviation="2" result="blur"/>
+            <feFlood flood-color="#6e6e6e" flood-opacity=".161"/>
+            <feComposite operator="in" in2="blur"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+    </defs>
+    <g data-name="그룹 327">
+        <g style="filter:url(#ojbxzg3d8a)" data-name="그룹 326">
+            <circle data-name="타원 12" cx="12" cy="12" r="12" transform="translate(6 4)" style="fill:#fff"/>
+        </g>
+        <text data-name="!" transform="translate(16 9)" style="fill:red;font-size:10px;font-family:SpoqaHanSansNeo-Regular,Spoqa Han Sans Neo"><tspan x="0" y="11">!</tspan></text>
+    </g>
+</svg>

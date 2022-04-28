@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">
+    <defs>
+        <filter id="munlk8boda" x="0" y="0" width="36" height="36" filterUnits="userSpaceOnUse">
+            <feOffset dy="2"/>
+            <feGaussianBlur stdDeviation="2" result="blur"/>
+            <feFlood flood-color="#6e6e6e" flood-opacity=".161"/>
+            <feComposite operator="in" in2="blur"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+    </defs>
+    <g data-name="그룹 275">
+        <g style="filter:url(#munlk8boda)" data-name="그룹 274">
+            <circle data-name="타원 12" cx="12" cy="12" r="12" transform="translate(6 4)" style="fill:#fff"/>
+        </g>
+        <path data-name="Icon material-subdirectory-arrow-left" d="m10.7 8.941.757.835-1.914 2.106h4.891V6H15.5v7.059H9.543l1.915 2.106L10.7 16l-3.2-3.529z" transform="rotate(180 14.75 13.5)" style="fill:#23c7d0"/>
+    </g>
+</svg>
